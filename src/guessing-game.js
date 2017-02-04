@@ -19,11 +19,19 @@ class GuessingGame {
     }
 
     lower() {
-    this.max= Math.round((this.max+this.min)/2);
+        if(this.min<this.max) {
+             this.max = Math.round((this.max + this.min) / 2);
+        }else{
+            this.min = Math.round((this.max + this.min) / 2);
+}
     }
 
     greater() {
-        this.min= Math.round((this.max+this.min)/2);
+        if(this.min<this.max) {
+            this.min = Math.round((this.max + this.min) / 2);
+        } else{
+            this.max = Math.round((this.max + this.min) / 2);
+        }
     }
 }
 
